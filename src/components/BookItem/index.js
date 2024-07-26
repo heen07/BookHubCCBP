@@ -1,7 +1,6 @@
 import {withRouter} from 'react-router-dom'
 
 import {BsFillStarFill, BsFillHeartFill} from 'react-icons/bs'
-
 import FavoriteContext from '../../Context/FavoriteContext'
 
 import './index.css'

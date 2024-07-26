@@ -72,26 +72,26 @@ class BookItemDetails extends Component {
   }
 
   renderBookDetailsProgressView = () => (
-    <div className='loader-container' testid='loader'>
-      <Loader type='TailSpin' color='#0284c7' height={50} width={50} />
+    <div className="loader-container" testid="loader">
+      <Loader type="TailSpin" color="#8284C7" height={32} width={32} />
     </div>
   )
 
   renderBookDetailsFailureView = () => (
-    <div className='book-shelves-failure-container'>
+    <div className="book-shelves-failure-container">
       <img
-        className='failure-image'
-        src='https://res.cloudinary.com/diag5apbn/image/upload/v1667567619/samples/BookHub/no-books-found_fbgtov.png'
-        alt='failure view'
+        className="failure-image"
+        src="https://res.cloudinary.com/diag5apbn/image/upload/v1667567619/samples/BookHub/no-books-found_fbgtov.png"
+        alt="failure view"
       />
-      <p className='book-shelves-failure-heading'>
+      <p className="book-shelves-failure-heading">
         Something went wrong. Please try Again.
       </p>
 
       <button
-        className='book-shelves-failure-btn'
+        className="book-shelves-failure-btn"
         onClick={this.onClickRetry}
-        type='button'
+        type="button"
       >
         Try Again
       </button>
@@ -114,21 +114,21 @@ class BookItemDetails extends Component {
     } = bookDetails
 
     return (
-      <div className='book-details-card-container'>
-        <div className='book-details-container'>
-          <img className='book-details-image' alt={title} src={coverPic} />
-          <div className='details-container'>
-            <h1 className='book-title' key={title}>
+      <div className="book-details-card-container">
+        <div className="book-details-container">
+          <img className="book-details-image" alt={title} src={coverPic} />
+          <div className="details-container">
+            <h1 className="book-title" key={title}>
               {title}
             </h1>
-            <p className='book-details-author-name'>{authorName}</p>
-            <div className='book-details-rating-container'>
-              <p className='avg-rating'>Avg rating</p>
-              <BsFillStarFill className='book-details-star-icon' />
-              <p className='book-details-rating'>{rating}</p>
+            <p className="book-details-author-name">{authorName}</p>
+            <div className="book-details-rating-container">
+              <p className="avg-rating">Avg rating</p>
+              <BsFillStarFill className="book-details-star-icon" />
+              <p className="book-details-rating">{rating}</p>
             </div>
-            <p className='book-details-status-heading'>
-              Status: <span className='book-details-status'>{readStatus}</span>
+            <p className="book-details-status-heading">
+              Status: <span className="book-details-status">{readStatus}</span>
             </p>
             <FavoriteContext.Consumer>
               {value => {
@@ -150,22 +150,22 @@ class BookItemDetails extends Component {
                 return (
                   <>
                     <label htmlFor={id}>
-                      <div className='favorite-container'>
-                        <p className='book-details-status-heading'>
+                      <div className="favorite-container">
+                        <p className="book-details-status-heading">
                           MyFavorite
                         </p>
                         {isChecked ? (
-                          <BsFillHeartFill className='favorite-book-icon-selected' />
+                          <BsFillHeartFill className="favorite-book-icon-selected" />
                         ) : (
-                          <BsFillHeartFill className='favorite-book-icon' />
+                          <BsFillHeartFill className="favorite-book-icon" />
                         )}
                       </div>
                     </label>
                     <input
-                      className='favorite-book-input'
+                      className="favorite-book-input"
                       onChange={onChangeFavorite}
                       id={id}
-                      type='checkbox'
+                      type="checkbox"
                     />
                   </>
                 )
@@ -173,15 +173,15 @@ class BookItemDetails extends Component {
             </FavoriteContext.Consumer>
           </div>
         </div>
-        <div className='author-container'>
-          <hr className='horizontal-line' />
+        <div className="author-container">
+          <hr className="horizontal-line" />
           <div>
-            <h1 className='about-heading'>About Author</h1>
-            <p className='about-text'>{aboutAuthor}</p>
+            <h1 className="about-heading">About Author</h1>
+            <p className="about-text">{aboutAuthor}</p>
           </div>
           <div>
-            <h1 className='about-heading'>About Book</h1>
-            <p className='about-text'>{aboutBook}</p>
+            <h1 className="about-heading">About Book</h1>
+            <p className="about-text">{aboutBook}</p>
           </div>
         </div>
       </div>
@@ -207,7 +207,7 @@ class BookItemDetails extends Component {
     return (
       <>
         <Header shelves />
-        <div className='book-details-bg-container'>
+        <div className="book-details-bg-container">
           {this.renderBookDetails()}
         </div>
         <Footer />
